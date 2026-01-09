@@ -2,12 +2,12 @@ import { i18n } from './i18n.js';
 
 // Menu Data
 const defaultMenu = [
-    { id: 1, name: "Osh (Plov)", price: "45,000 UZS", category: "lunch", img: "./hero_plov.png" },
-    { id: 2, name: "Somsa", price: "8,000 UZS", category: "lunch", img: "./somsa_gallery.png" },
-    { id: 3, name: "Shurpa", price: "35,000 UZS", category: "lunch", img: "./shurpa.png" },
-    { id: 4, name: "Kofé", price: "20,000 UZS", category: "drinks", img: "./coffee_cup_premium_1767982995883.png" },
-    { id: 5, name: "Choy", price: "5,000 UZS", category: "drinks", img: "./uzbek_tea_piala_1767983013631.png" },
-    { id: 6, name: "Meva sharbati", price: "15,000 UZS", category: "drinks", img: "./fresh_fruit_juice_glass_1767983031047.png" }
+    { id: 1, name: "Osh (Plov)", price: "45,000 UZS", category: "lunch", img: "/hero_plov.png" },
+    { id: 2, name: "Somsa", price: "8,000 UZS", category: "lunch", img: "/somsa_gallery.png" },
+    { id: 3, name: "Shurpa", price: "35,000 UZS", category: "lunch", img: "/shurpa.png" },
+    { id: 4, name: "Kofé", price: "20,000 UZS", category: "drinks", img: "/coffee_cup_premium_1767982995883.png" },
+    { id: 5, name: "Choy", price: "5,000 UZS", category: "drinks", img: "/uzbek_tea_piala_1767983013631.png" },
+    { id: 6, name: "Meva sharbati", price: "15,000 UZS", category: "drinks", img: "/fresh_fruit_juice_glass_1767983031047.png" }
 ];
 
 const reviews = [
