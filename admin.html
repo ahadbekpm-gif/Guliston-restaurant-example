@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Gulistan Garden</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body style="padding-top: 50px;">
+    <div class="container">
+        <h1 style="margin-bottom: 30px;">Admin Dashboard</h1>
+        <div class="glass" style="padding: 30px; border-radius: var(--radius);">
+            <h3>Add/Update Menu Item</h3>
+            <form id="admin-menu-form" style="display: flex; flex-direction: column; gap: 15px; margin-top: 20px;">
+                <input type="text" id="menu-name" placeholder="Item Name"
+                    style="padding: 10px; border-radius: var(--radius); border: 1px solid #ddd;">
+                <input type="text" id="menu-price" placeholder="Price (e.g. 45,000 UZS)"
+                    style="padding: 10px; border-radius: var(--radius); border: 1px solid #ddd;">
+                <select id="menu-category" style="padding: 10px; border-radius: var(--radius); border: 1px solid #ddd;">
+                    <option value="lunch">Lunch</option>
+                    <option value="drinks">Drinks</option>
+                    <option value="breakfast">Breakfast</option>
+                </select>
+                <button type="submit" class="btn btn-primary">Save Item</button>
+            </form>
+        </div>
+
+        <div id="admin-menu-list" class="grid grid-2" style="margin-top: 50px;">
+            <!-- Current Menu Items -->
+        </div>
+
+        <div style="margin-top: 50px; text-align: center;">
+            <a href="index.html" class="btn btn-secondary">Back to Site</a>
+        </div>
+    </div>
+
+    <script>
+        const menuForm = document.getElementById('admin-menu-form');
+        const menuList = document.getElementById('admin-menu-list');
+
+        let menuData = JSON.parse(localStorage.getItem('menuData')) || [
+            { id: 1, name: "Osh (Plov)", price: "45,000 UZS", category: "lunch", img: "./hero_plov.png" },
+            { id: 2, name: "Somsa", price: "8,000 UZS", category: "lunch", img: "./hero_plov.png" }
+        ];
+
+        function renderAdminMenu() {
+            menuList.innerHTML = menuData.map(item => `
+                <div class="glass" style="padding: 20px; border-radius: var(--radius); display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <h4>${item.name}</h4>
+                        <p>${item.price} - ${item.category}</p>
+                    </div>
+                    <button onclick="deleteItem(${item.id})" style="color: red; background: none; font-weight: bold;">✕</button>
+                </div>
+            `).join('');
+            localStorage.setItem('menuData', JSON.stringify(menuData));
+        }
+
+        menuForm.onclick = (e) => {
+            if (e.target.tagName === 'BUTTON') {
+                e.preventDefault();
+                const name = document.getElementById('menu-name').value;
+                const price = document.getElementById('menu-price').value;
+                const category = document.getElementById('menu-category').value;
+
+                if (name && price) {
+                    menuData.push({ id: Date.now(), name, price, category, img: "./hero_plov.png" });
+                    renderAdminMenu();
+                    menuForm.reset();
+                }
+            }
+        };
+
+        window.deleteItem = (id) => {
+            menuData = menuData.filter(item => item.id !== id);
+            renderAdminMenu();
+        };
+
+        renderAdminMenu();
+    </script>
+</body>
+
+</html>
