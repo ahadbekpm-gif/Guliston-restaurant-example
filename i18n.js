@@ -20,7 +20,10 @@ const translations = {
       breakfast: "Nonushta",
       lunch: "Tushlik",
       drinks: "Ichimliklar",
-      order_phone: "Buyurtma berish"
+      hot_dishes: "Issiq taomlar",
+      salads: "Salatlar",
+      order_phone: "Buyurtma berish",
+      back_to_categories: "Toifalarga qaytish"
     },
     reservation: {
       title: "Stol band qilish",
@@ -65,7 +68,10 @@ const translations = {
       breakfast: "Завтрак",
       lunch: "Обед",
       drinks: "Напитки",
-      order_phone: "Заказать сейчас"
+      hot_dishes: "Горячие блюда",
+      salads: "Салаты",
+      order_phone: "Заказать сейчас",
+      back_to_categories: "Вернуться к категориям"
     },
     reservation: {
       title: "Забронировать столик",
@@ -110,7 +116,10 @@ const translations = {
       breakfast: "Breakfast",
       lunch: "Lunch",
       drinks: "Drinks",
-      order_phone: "Order Now"
+      hot_dishes: "Hot Dishes",
+      salads: "Salads",
+      order_phone: "Order Now",
+      back_to_categories: "Back to Categories"
     },
     reservation: {
       title: "Book a Table",

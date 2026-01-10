@@ -1,13 +1,21 @@
 import { i18n } from './i18n.js';
 
-// Menu Data
+const categories = [
+    { id: 'hot_dishes', nameKey: 'menu.hot_dishes', img: '/lagmon_uygurskiy.png' },
+    { id: 'lunch', nameKey: 'menu.lunch', img: '/hero_plov.png' },
+    { id: 'drinks', nameKey: 'menu.drinks', img: '/coffee_cup_premium_1767982995883.png' }
+];
+
 const defaultMenu = [
     { id: 1, name: "Osh (Plov)", price: "45,000 UZS", category: "lunch", img: "/hero_plov.png" },
     { id: 2, name: "Somsa", price: "8,000 UZS", category: "lunch", img: "/somsa_gallery.png" },
     { id: 3, name: "Shurpa", price: "35,000 UZS", category: "lunch", img: "/shurpa.png" },
     { id: 4, name: "Kofé", price: "20,000 UZS", category: "drinks", img: "/coffee_cup_premium_1767982995883.png" },
     { id: 5, name: "Choy", price: "5,000 UZS", category: "drinks", img: "/uzbek_tea_piala_1767983013631.png" },
-    { id: 6, name: "Meva sharbati", price: "15,000 UZS", category: "drinks", img: "/fresh_fruit_juice_glass_1767983031047.png" }
+    { id: 6, name: "Meva sharbati", price: "15,000 UZS", category: "drinks", img: "/fresh_fruit_juice_glass_1767983031047.png" },
+    { id: 7, name: "Lagmon uygurskiy", price: "35,000 UZS", category: "hot_dishes", img: "/lagmon_uygurskiy.png" },
+    { id: 8, name: "Jazz", price: "70,000 UZS", category: "hot_dishes", img: "/jazz.png" },
+    { id: 9, name: "Kurinnoe sate", price: "35,000 UZS", category: "hot_dishes", img: "/chicken_sate.png" }
 ];
 
 const reviews = [
@@ -20,17 +28,45 @@ const menuData = JSON.parse(localStorage.getItem('menuData')) || defaultMenu;
 
 // Initialize App
 document.addEventListener('DOMContentLoaded', () => {
-    renderMenu();
     renderReviews();
     setupEventListeners();
 });
 
 // Render Menu
-function renderMenu() {
+function renderCategories() {
     const container = document.getElementById('menu-items');
     if (!container) return;
 
-    container.innerHTML = menuData.map(item => `
+    container.innerHTML = categories.map(cat => `
+    <div class="card-premium" onclick="showCategory('${cat.id}')">
+      <div style="height: 250px; overflow: hidden;">
+        <img src="${cat.img}" alt="${cat.id}" class="card-image">
+      </div>
+      <div style="padding: 24px; text-align: center;">
+        <h3 data-i18n="${cat.nameKey}" style="font-size: 1.5rem;"></h3>
+      </div>
+    </div>
+  `).join('');
+    i18n.updateContent();
+}
+
+window.showCategory = (categoryId) => {
+    renderMenuItems(categoryId);
+};
+
+function renderMenuItems(categoryId) {
+    const container = document.getElementById('menu-items');
+    if (!container) return;
+
+    const filtered = defaultMenu.filter(item => item.category === categoryId);
+
+    container.innerHTML = `
+    <div style="grid-column: 1 / -1; margin-bottom: 32px;">
+        <button onclick="renderCategories()" class="btn btn-secondary" style="display: flex; align-items: center; gap: 8px;">
+            ← <span data-i18n="menu.back_to_categories"></span>
+        </button>
+    </div>
+    ` + filtered.map(item => `
     <div class="card-premium">
       <div style="overflow: hidden;">
         <img src="${item.img}" alt="${item.name}" class="card-image">
@@ -45,6 +81,9 @@ function renderMenu() {
     </div>
   `).join('');
     i18n.updateContent();
+
+    // Scroll to menu top
+    document.getElementById('menu').scrollIntoView({ behavior: 'smooth' });
 }
 
 function renderReviews() {
@@ -72,7 +111,7 @@ function renderReviews() {
 window.setLang = (lang) => {
     i18n.setLanguage(lang);
     renderReviews(); // Re-render reviews on language change
-    renderMenu();
+    renderCategories();
 };
 
 // Phone Ordering
@@ -109,10 +148,12 @@ document.addEventListener('click', (e) => {
     }
 });
 
-// Initial UI Update
+// Initial Render
 document.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('lang') || 'uz';
     updateLangUI(savedLang);
+    renderCategories(); // Changed from renderMenu
+    renderReviews();
 });
 
 function setupEventListeners() {
