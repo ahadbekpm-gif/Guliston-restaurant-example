@@ -1,27 +1,26 @@
 import { i18n } from './i18n.js';
 
 const categories = [
-    { id: 'hot_dishes', nameKey: 'menu.hot_dishes', img: '/lagmon_uygurskiy_real.png' },
-    { id: 'pizza', nameKey: 'menu.pizza', img: '/placeholder.png' },
-    { id: 'pide', nameKey: 'menu.pide', img: '/syrnoe_pide_real.png' },
-    { id: 'sushi', nameKey: 'menu.sushi', img: '/unagi_filadelfiya_real.png' },
-    { id: 'steak', nameKey: 'menu.steak', img: '/steyk_assorti_real.png' },
-    { id: 'first_dishes', nameKey: 'menu.first_dishes', img: '/pelmeni_po_domashni_real.png' },
-    { id: 'second_dishes', nameKey: 'menu.second_dishes', img: '/ryba_real.png' },
-    { id: 'fast_food', nameKey: 'menu.fast_food', img: '/hot_dog_real.png' },
-    { id: 'breakfast', nameKey: 'menu.breakfast', img: '/bilinchiki_tvorog_real.png' },
-    { id: 'salads', nameKey: 'menu.salads', img: '/lebedi_real.png' },
-    { id: 'lunch', nameKey: 'menu.lunch', img: '/hero_plov.png' },
-    { id: 'drinks', nameKey: 'menu.drinks', img: '/coffee_cup_premium_1767982995883.png' }
+    { id: 'hot_dishes', nameKey: 'menu.hot_dishes', img: '/hot_dishes_composite.png' },
+    { id: 'pizza', nameKey: 'menu.pizza', img: '/pizza_composite.png' },
+    { id: 'pide', nameKey: 'menu.pide', img: '/pide_composite.png' },
+    { id: 'sushi', nameKey: 'menu.sushi', img: '/sushi_composite.png' },
+    { id: 'steak', nameKey: 'menu.steak', img: '/steak_composite.png' },
+    { id: 'first_dishes', nameKey: 'menu.first_dishes', img: '/first_dishes_composite.png' },
+    { id: 'second_dishes', nameKey: 'menu.second_dishes', img: '/second_dishes_composite.png' },
+    { id: 'fast_food', nameKey: 'menu.fast_food', img: '/fast_food_composite.png' },
+    { id: 'breakfast', nameKey: 'menu.breakfast', img: '/breakfast_composite.png' },
+    { id: 'salads', nameKey: 'menu.salads', img: '/salads_composite.png' },
+    { id: 'tea', nameKey: 'menu.tea', img: '/tea_composite.png' },
+    { id: 'drinks', nameKey: 'menu.drinks', img: '/drinks_composite.png' },
+    { id: 'desserts', nameKey: 'menu.desserts', img: '/desserts_composite.png' }
 ];
 
 const defaultMenu = [
     { id: 1, name: "Osh (Plov)", price: "45,000 UZS", category: "lunch", img: "/hero_plov.png" },
     { id: 2, name: "Somsa", price: "8,000 UZS", category: "lunch", img: "/somsa_gallery.png" },
     { id: 3, name: "Shurpa", price: "35,000 UZS", category: "lunch", img: "/shurpa.png" },
-    { id: 4, name: "Kofé", price: "20,000 UZS", category: "drinks", img: "/coffee_cup_premium_1767982995883.png" },
-    { id: 5, name: "Choy", price: "5,000 UZS", category: "drinks", img: "/uzbek_tea_piala_1767983013631.png" },
-    { id: 6, name: "Meva sharbati", price: "15,000 UZS", category: "drinks", img: "/fresh_fruit_juice_glass_1767983031047.png" },
+
     { id: 7, name: "Lagmon uygurskiy", price: "35,000 UZS", category: "hot_dishes", img: "/lagmon_uygurskiy_real.png" },
     { id: 8, name: "Jazz", price: "70,000 UZS", category: "hot_dishes", img: "/jazz_real.png" },
     { id: 9, name: "Kurinnoe sate", price: "35,000 UZS", category: "hot_dishes", img: "/chicken_sate_real.png" },
@@ -184,7 +183,44 @@ const defaultMenu = [
     { id: 166, name: "Baxor salat", price: "20,000 UZS", category: "salads", img: "/baxor_salat_real.png" },
     { id: 167, name: "Chilaki salat", price: "25,000 UZS", category: "salads", img: "/chilaki_salat_real.png" },
     { id: 168, name: "Shaxlo", price: "35,000 UZS", category: "salads", img: "/shaxlo_real.png" },
-    { id: 169, name: "Osiyo", price: "40,000 UZS", category: "salads", img: "/osiyo_real.png" }
+    { id: 169, name: "Osiyo", price: "40,000 UZS", category: "salads", img: "/osiyo_real.png" },
+    { id: 170, name: "Karkade chay", price: "12,000 UZS", category: "tea", img: "/chay_real.png" },
+    { id: 171, name: "Yablochniy chay s koritsey", price: "16,000 UZS", category: "tea", img: "/chay_real.png" },
+    { id: 172, name: "Yagodnyy chay", price: "18,000 UZS", category: "tea", img: "/chay_real.png" },
+    { id: 173, name: "Uchrashuv maxsus", price: "25,000 UZS", category: "tea", img: "/chay_real.png" },
+    { id: 174, name: "Fruktoviy chay", price: "25,000 UZS", category: "tea", img: "/chay_real.png" },
+    { id: 175, name: "Imbir chay s limonom", price: "28,000 UZS", category: "tea", img: "/chay_real.png" },
+    { id: 176, name: "Klubnichniy chay", price: "20,000 UZS", category: "tea", img: "/chay_real.png" },
+    { id: 177, name: "Malinoviy chay", price: "20,000 UZS", category: "tea", img: "/chay_real.png" },
+    { id: 178, name: "Apelsinoviy chay", price: "16,000 UZS", category: "tea", img: "/chay_real.png" },
+    { id: 179, name: "Moxito 1 l", price: "28,000 UZS", category: "drinks", img: "/moxito_1l_real.png" },
+    { id: 180, name: "Moxito Klassicheskiy", price: "16,000 UZS", category: "drinks", img: "/moxito_classic_real.png" },
+    { id: 181, name: "Kompot 1 l", price: "13,000 UZS", category: "drinks", img: "/kompot_real.png" },
+    { id: 182, name: "Sok", price: "17,000 UZS", category: "drinks", img: "/sok_real.png" },
+    { id: 183, name: "Flavis 1.25 l", price: "12,000 UZS", category: "drinks", img: "/flavis_real.png" },
+    { id: 184, name: "Flavis 0.5 l", price: "8,000 UZS", category: "drinks", img: "/flavis_real.png" },
+    { id: 185, name: "Sprite razliv 700 g", price: "8,000 UZS", category: "drinks", img: "/sprite_razliv_real.png" },
+    { id: 186, name: "Fanta razliv 700 g", price: "8,000 UZS", category: "drinks", img: "/fanta_razliv_real.png" },
+    { id: 187, name: "Kola razliv 700 g", price: "8,000 UZS", category: "drinks", img: "/kola_razliv_real.png" },
+    { id: 188, name: "Fanta 1.5 l", price: "15,000 UZS", category: "drinks", img: "/fanta_1_5l_real.png" },
+    { id: 189, name: "Fanta 1 l", price: "12,000 UZS", category: "drinks", img: "/fanta_1l_real.png" },
+    { id: 190, name: "Fanta 2 l", price: "18,000 UZS", category: "drinks", img: "/fanta_2l_real.png" },
+    { id: 191, name: "Kola 2 l", price: "18,000 UZS", category: "drinks", img: "/kola_2l_real.png" },
+    { id: 192, name: "Kola 1.5 l", price: "15,000 UZS", category: "drinks", img: "/kola_1_5l_real.png" },
+    { id: 193, name: "Kola 1 l", price: "12,000 UZS", category: "drinks", img: "/kola_1l_real.png" },
+    { id: 194, name: "Suv 1.5 l", price: "6,000 UZS", category: "drinks", img: "/suv_real.png" },
+    { id: 195, name: "Suv 1 l", price: "5,000 UZS", category: "drinks", img: "/suv_real.png" },
+    { id: 196, name: "Suv 0.5 l", price: "4,000 UZS", category: "drinks", img: "/suv_real.png" },
+    { id: 197, name: "Gon s bananom i kivi", price: "40,000 UZS", category: "desserts", img: "/gon_banan_kivi_real.png" },
+    { id: 198, name: "Gon eksklyuzivnie", price: "53,000 UZS", category: "desserts", img: "/gon_exclusive_real.png" },
+    { id: 199, name: "Bel Eksklyuzivnie dabl", price: "70,000 UZS", category: "desserts", img: "/bel_exclusive_double_real.png" },
+    { id: 200, name: "Bel Khalf", price: "27,000 UZS", category: "desserts", img: "/bel_half_real.png" },
+    { id: 201, name: "Bel Orexoviy miks", price: "38,000 UZS", category: "desserts", img: "/bel_orexoviy_mix_real.png" },
+    { id: 202, name: "Bel s myodom", price: "20,000 UZS", category: "desserts", img: "/bel_med_real.png" },
+    { id: 203, name: "Burger s fruktovye", price: "25,000 UZS", category: "desserts", img: "/burger_fruktoviy_real.png" },
+    { id: 204, name: "Burger iz morojnoe", price: "25,000 UZS", category: "desserts", img: "/burger_morojenoe_real.png" },
+    { id: 205, name: "Gon 4 xil meva", price: "60,000 UZS", category: "desserts", img: "/gon_4_xil_meva_real.png" },
+    { id: 206, name: "San sebastyan", price: "30,000 UZS", category: "desserts", img: "/san_sebastian_real.png" }
 ];
 
 const reviews = [
@@ -222,6 +258,8 @@ function renderCategories() {
 window.showCategory = (categoryId) => {
     renderMenuItems(categoryId);
 };
+
+window.renderCategories = renderCategories;
 
 function renderMenuItems(categoryId) {
     const container = document.getElementById('menu-items');

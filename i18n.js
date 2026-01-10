@@ -30,6 +30,8 @@ const translations = {
       fast_food: "Fast-fud",
       breakfast: "Nonushta",
       salads: "Salatlar",
+      tea: "Choy",
+      desserts: "Desertlar",
       order_phone: "Buyurtma berish",
       back_to_categories: "Toifalarga qaytish"
     },
@@ -86,6 +88,8 @@ const translations = {
       fast_food: "Фаст-Фуд",
       breakfast: "Завтрак",
       salads: "Салаты",
+      tea: "Чай",
+      desserts: "Десерты",
       order_phone: "Заказать сейчас",
       back_to_categories: "Вернуться к категориям"
     },
@@ -142,6 +146,8 @@ const translations = {
       fast_food: "Fast Food",
       breakfast: "Breakfast",
       salads: "Salads",
+      tea: "Tea",
+      desserts: "Desserts",
       order_phone: "Order Now",
       back_to_categories: "Back to Categories"
     },
