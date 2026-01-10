@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin - Gulistan Garden</title>
+    <title>Admin - Uchrashuv Best</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 
@@ -41,8 +41,8 @@
         const menuList = document.getElementById('admin-menu-list');
 
         let menuData = JSON.parse(localStorage.getItem('menuData')) || [
-            { id: 1, name: "Osh (Plov)", price: "45,000 UZS", category: "lunch", img: "./hero_plov.png" },
-            { id: 2, name: "Somsa", price: "8,000 UZS", category: "lunch", img: "./hero_plov.png" }
+            { id: 1, name: "Osh (Plov)", price: "45,000 UZS", category: "lunch", img: "/hero_plov.png" },
+            { id: 2, name: "Somsa", price: "8,000 UZS", category: "lunch", img: "/somsa_gallery.png" }
         ];
 
         function renderAdminMenu() {
