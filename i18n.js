@@ -10,7 +10,7 @@ const translations = {
       },
       title: "Gulistonda premium milliy va yevropa taomlari",
       description: "Mazali taomlar · Qulay muhit · Yuqori sifat",
-      trust_signal: '<span class="icon-gold">⭐</span> 4.8 Google rating · <span class="icon-gold">📍</span> Guliston markazida · <span class="icon-gold">🕒</span> Har kuni 10:00–23:00',
+      trust_signal: '<span class="icon-gold">⭐</span> 4.5 Google rating · <span class="icon-gold">📍</span> Markazda · <span class="icon-gold">🕒</span> Har kuni 10:00–00:00',
       cta_menu: "Menyuni ko'rish",
       cta_call: "Qo'ng'iroq qilish",
       cta_map: "Manzilni ko'rish"
@@ -31,8 +31,8 @@ const translations = {
     },
     contact: {
       title: "Biz bilan bog'lanish",
-      hours: "Ish vaqti: 09:00 - 23:00",
-      address: "Guliston sh., O'zbekiston ko'chasi, 42-uy",
+      hours: "Ish vaqti: 10:00 - 00:00",
+      address: "Guliston sh., Alisher Navoiy ko'chasi, 42-uy",
       follow: "Bizni kuzatib boring"
     },
     gallery: {
@@ -55,7 +55,7 @@ const translations = {
       },
       title: "Премиальные национальные и европейские блюда в Гулистане",
       description: "Вкусная еда · Уютная атмосфера · Высокое качество",
-      trust_signal: '<span class="icon-gold">⭐</span> 4.8 Google rating · <span class="icon-gold">📍</span> В центре Гулистана · <span class="icon-gold">🕒</span> Ежедневно 10:00–23:00',
+      trust_signal: '<span class="icon-gold">⭐</span> 4.5 Google rating · <span class="icon-gold">📍</span> В центре · <span class="icon-gold">🕒</span> Ежедневно 10:00–00:00',
       cta_menu: "Посмотреть меню",
       cta_call: "Позвонить",
       cta_map: "Найти на карте"
@@ -76,8 +76,8 @@ const translations = {
     },
     contact: {
       title: "Связаться с нами",
-      hours: "Часы работы: 09:00 - 23:00",
-      address: "г. Гулистан, ул. Узбекистанская, д. 42",
+      hours: "Часы работы: 10:00 - 00:00",
+      address: "г. Гулистан, ул. Алишера Навои, д. 42",
       follow: "Подписывайтесь на нас"
     },
     gallery: {
@@ -100,7 +100,7 @@ const translations = {
       },
       title: "Premium National & European Cuisine in Gulistan",
       description: "Delicious Food · Cozy Atmosphere · High Quality",
-      trust_signal: '<span class="icon-gold">⭐</span> 4.8 Google rating · <span class="icon-gold">📍</span> Central Gulistan · <span class="icon-gold">🕒</span> Daily 10:00–23:00',
+      trust_signal: '<span class="icon-gold">⭐</span> 4.5 Google rating · <span class="icon-gold">📍</span> Central Location · <span class="icon-gold">🕒</span> Daily 10:00–00:00',
       cta_menu: "View Menu",
       cta_call: "Call Now",
       cta_map: "Get Directions"
@@ -121,8 +121,8 @@ const translations = {
     },
     contact: {
       title: "Contact Us",
-      hours: "Working Hours: 09:00 - 23:00",
-      address: "42 Uzbekistan Str., Gulistan",
+      hours: "Working Hours: 10:00 - 00:00",
+      address: "42 Alisher Navoiy Str., Gulistan",
       follow: "Follow Us"
     },
     gallery: {

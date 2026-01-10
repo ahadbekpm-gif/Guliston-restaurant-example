@@ -77,7 +77,7 @@ window.setLang = (lang) => {
 
 // Phone Ordering
 window.orderPhone = (itemName) => {
-    window.location.href = `tel:+998123456789`;
+    window.location.href = `tel:+998782211111`;
 };
 
 // Language Dropdown Logic
